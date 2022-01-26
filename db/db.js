@@ -441,32 +441,8 @@ const getAssigned = (hash) => {
 
 
 
-const getManual = () => { 
 
-    return new Promise(async (resolve,reject)=> { 
 
-        const query =
-        { 
-            text:'SELECT * FROM launchpad_nfts WHERE "tx_hash"=$1 AND minted=$2',
-            values:["airdrop","false"]
-
-        }
-        try 
-        { 
-            const res = await client.query(query)
-            resolve(res.rows)
-        }
-        catch (err)
-        { 
-            console.log(err)
-            console.log("There was an error")
-        }
-        
-    })
-
-}
-
-module.exports.getManual = getManual
 module.exports.getAssigned = getAssigned
 module.exports.filterTX = filterTX
 module.exports.updateMint = updateMint
