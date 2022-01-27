@@ -11,9 +11,10 @@
   },
 
   "scripts": {
-    
+
     "tx":"node scripts/tx.js",
     "queue":"node scripts/assignMint.js",
     "retry":"node scripts/retryMint.js"
+    
   }
 }

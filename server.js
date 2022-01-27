@@ -20,7 +20,7 @@ app.get("/api/v1/sale/:address",async (req,res)=> {
     
     console.log(SALE_INFO)
     console.log(REMAINING_NFT)
-    if (REMAINING_NFT >= 9000)
+    if (REMAINING_NFT >= process.env.COLLECTION_SIZE)
      {
 
 
