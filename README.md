@@ -1,9 +1,7 @@
 # ImmutableX Backend Minting
 
 
-## Installation
 
-Go into the root of the folder and install all the dependencies.
 
 ## How does it work?
 
@@ -34,7 +32,9 @@ COLLECTION_SIZE=COLLECTION_SIZE
 ```
 
 
+## Installation
 
+Go into the root of the folder and install all the dependencies.
 ```bash
 #Installs all dependencies
 npm install
