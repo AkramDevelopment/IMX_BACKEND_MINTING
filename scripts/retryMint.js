@@ -9,13 +9,15 @@ const { getUnminted } = require("../db/db");
 const { mintNFT, sleep } = require("../imxMethods/mint");
 
 const startQueue = async () => {
-  //1 minute sleep timer
+  //1 minute sleep timer to avoid overlapping in script timing..
   await sleep(60000);
 
   const results = await getUnminted();
 
   results.forEach(async (element, index) => {
     try {
+      //Gives it a small delay before making a mint request
+      await sleep(1000 + parseInt(`${index}000`))
       await mintNFT(element.to, element.id);
       console.log(
         element.id,
