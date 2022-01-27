@@ -39,6 +39,9 @@ Go into the root of the folder and install all the dependencies.
 #Installs all dependencies
 npm install
 
+#Create database tables needed 
+npm run create-tables
+
 #Starts the API server to start acccepting mints and other requests.
 npm start server
 
