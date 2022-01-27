@@ -345,12 +345,12 @@ const filterTX = (status) => {
   });
 };
 
-const getAssigned = (hash) => {
+const getUnminted = () => {
   return new Promise(async (resolve, reject) => {
     console.log(hash);
     const query = {
-      text: 'SELECT * FROM launchpad_nfts WHERE "tx_hash"=$1 AND minted=$2',
-      values: [hash, "false"],
+      text: 'SELECT * FROM launchpad_nfts WHERE minted=$1',
+      values: ["false"],
     };
     try {
       const res = await client.query(query);
@@ -360,9 +360,12 @@ const getAssigned = (hash) => {
       console.log("There was an error");
     }
   });
-};
+}
 
-module.exports.getAssigned = getAssigned;
+
+
+
+module.exports.getUnminted = getUnminted;
 module.exports.filterTX = filterTX;
 module.exports.updateMint = updateMint;
 module.exports.setMinted = setMinted;
