@@ -349,7 +349,7 @@ const getUnminted = () => {
   return new Promise(async (resolve, reject) => {
     console.log(hash);
     const query = {
-      text: 'SELECT * FROM launchpad_nfts WHERE minted=$1',
+      text: "SELECT * FROM launchpad_nfts WHERE minted=$1",
       values: ["false"],
     };
     try {
@@ -360,11 +360,26 @@ const getUnminted = () => {
       console.log("There was an error");
     }
   });
-}
+};
 
+const startPresale = async () => {
+  const query = {
+    text: "UPDATE launchpad_sale SET public=$1, presale=$2 WHERE id=1",
+    values: ["false", "true"],
+  };
+  await client.query(query);
+};
 
+const startPublic = async () => {
+  const query = {
+    text: "UPDATE launchpad_sale SET public=$1, presale=$2 WHERE id=1",
+    values: ["true", "false"],
+  };
+  await client.query(query);
+};
 
-
+module.exports.startPublic = startPublic;
+module.exports.startPresale = startPresale;
 module.exports.getUnminted = getUnminted;
 module.exports.filterTX = filterTX;
 module.exports.updateMint = updateMint;

@@ -55,6 +55,16 @@ npm run queue
 npm run retry
 ```
 
+## Configuration commands
+```bash
+
+#Start Presale
+npm run start-presale
+
+#Start Public
+npm run start-public
+
+```
 
 
 

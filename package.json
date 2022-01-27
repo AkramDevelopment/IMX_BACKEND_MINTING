@@ -12,6 +12,8 @@
 
   "scripts": {
     "create-tables":"node db/createTables.js",
+    "start-presale":"node scripts/startPresale",
+    "start-public":"node scripts/startPublic.js",
     "server":"node server.js",
     "tx":"node scripts/tx.js",
     "queue":"node scripts/assignMint.js",
