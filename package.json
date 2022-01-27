@@ -11,7 +11,7 @@
   },
 
   "scripts": {
-
+    "server":"node server.js",
     "tx":"node scripts/tx.js",
     "queue":"node scripts/assignMint.js",
     "retry":"node scripts/retryMint.js"
