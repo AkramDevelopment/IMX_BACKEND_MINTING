@@ -2,8 +2,7 @@
 
 const Web3 = require('web3');
 const fetch = require("node-fetch")
-
-const {filterTX,updateStatus, updateMint} = require("./db/db")
+const {filterTX,updateStatus, updateMint} = require("../db/db")
 
 
 

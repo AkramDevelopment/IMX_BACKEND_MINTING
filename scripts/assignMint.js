@@ -1,7 +1,7 @@
 
 
-const {updateMint,assignTokens,filterTX,getAssigned } = require('./db/db');
-const {mintNFT,sleep} = require("./imxMethods/mint")
+const {updateMint,assignTokens,filterTX,getAssigned } = require('../db/db');
+const {mintNFT,sleep} = require("../imxMethods/mint")
 
 
 const assignMint = (element)=> { 

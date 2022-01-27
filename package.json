@@ -8,5 +8,12 @@
     "node-fetch": "^2.6.6",
     "pg": "^8.7.1",
     "web3": "^1.6.1"
+  },
+
+  "scripts": {
+    
+    "tx":"node scripts/tx.js",
+    "queue":"node scripts/assignMint.js",
+    "retry":"node scripts/retryMint.js"
   }
 }
