@@ -91,5 +91,5 @@ POST /api/v1/mint -> Body: address,hash,type(IMX/ETH),quantity
 ## Contact me
 
 If you have any kind of issues getting this to work feel free to send me a DM on discord Akram | Fantasy Labs#8840
-Or join my projects discord channel, 
+Or join my projects discord channel : https://discord.gg/xqAeEjGQ2H
 
