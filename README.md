@@ -73,7 +73,7 @@ npm run stop-sales
 
 ## Endpoints
 
-Endpoints 
+
 ``` bash
 #Return Sale eligibility
 GET /api/v1/sale/:address
