@@ -52,7 +52,7 @@ npm start tx
 #Starts pushing mints out that are in the queue after validating transaction
 npm run queue
 
-#Starts script to push mints that failed due to API failure issues (Not available as of writing this will be coming in the next code update)
+#Starts script to push mints that failed due to API failure issues
 npm run retry
 ```
 
@@ -71,4 +71,25 @@ npm run stop-sales
 ```
 
 
+## Endpoints
+
+Endpoints 
+``` bash
+#Return Sale eligibility
+GET /api/v1/sale/:address
+
+#Returns all transactions of an address
+GET /api/v1/tx/:address 
+
+#Return remaining NFT's left to be minted.. This route needs to be updated 
+GET /api/v1/count
+
+#Checks transaction given and executes mint 
+
+POST /api/v1/mint -> Body: address,hash,type(IMX/ETH),quantity
+```
+## Contact me
+
+If you have any kind of issues getting this to work feel free to send me a DM on discord Akram | Fantasy Labs#8840
+Or join my projects discord channel, 
 
