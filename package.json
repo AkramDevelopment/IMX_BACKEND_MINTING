@@ -11,6 +11,7 @@
   },
 
   "scripts": {
+    "stop-sales":"node scripts/stopSale.js",
     "create-tables":"node db/createTables.js",
     "start-presale":"node scripts/startPresale",
     "start-public":"node scripts/startPublic.js",

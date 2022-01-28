@@ -65,6 +65,9 @@ npm run start-presale
 #Start Public
 npm run start-public
 
+#Stop all sales
+npm run stop-sales
+
 ```
 
 

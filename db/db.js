@@ -378,6 +378,15 @@ const startPublic = async () => {
   await client.query(query);
 };
 
+const stopSale = async () => {
+  const query = {
+    text: "UPDATE launchpad_sale SET public=$1, presale=$2 WHERE id=1",
+    values: ["false", "false"],
+  };
+  await client.query(query);
+};
+
+module.exports.stopSale = stopSale;
 module.exports.startPublic = startPublic;
 module.exports.startPresale = startPresale;
 module.exports.getUnminted = getUnminted;
