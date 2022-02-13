@@ -70,6 +70,19 @@ npm run stop-sales
 
 ```
 
+## Importing Whitelist
+
+When going to import the whitelist be sure that you have a csv file 
+with then name "whitelist.csv" and make sure the address header name
+is "address" there is an example csv file in the root of the folder to
+reference
+```bash
+
+#import Whitelist
+npm run import-whitelist
+```
+
+
 
 ## Endpoints
 

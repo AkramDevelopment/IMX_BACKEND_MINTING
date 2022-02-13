@@ -386,6 +386,21 @@ const stopSale = async () => {
   await client.query(query);
 };
 
+const addWhitelist = async (address) => {
+  const query = {
+    text: 'INSERT INTO "launchpad_whitelist"("address")VALUES($1)',
+    values: [address],
+  };
+
+  try {
+    await client.query(query);
+    console.log(address," Has been imported!")
+  } catch {
+    console.log("There was an issue importing address of", address);
+  }
+};
+
+module.exports.addWhitelist = addWhitelist
 module.exports.stopSale = stopSale;
 module.exports.startPublic = startPublic;
 module.exports.startPresale = startPresale;

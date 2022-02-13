@@ -1,7 +1,10 @@
 {
   "dependencies": {
-    "@imtbl/imx-sdk": "^1.3.31",
+    "@ethersproject/providers": "^5.5.2",
+    "@ethersproject/wallet": "^5.5.0",
+    "@imtbl/imx-sdk": "^1.3.35",
     "cors": "^2.8.5",
+    "csv-parser": "^3.0.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "helmet": "^5.0.2",
@@ -9,16 +12,15 @@
     "pg": "^8.7.1",
     "web3": "^1.6.1"
   },
-
   "scripts": {
-    "stop-sales":"node scripts/stopSale.js",
-    "create-tables":"node db/createTables.js",
-    "start-presale":"node scripts/startPresale",
-    "start-public":"node scripts/startPublic.js",
-    "server":"node server.js",
-    "tx":"node scripts/tx.js",
-    "queue":"node scripts/assignMint.js",
-    "retry":"node scripts/retryMint.js"
-    
+    "stop-sales": "node scripts/stopSale.js",
+    "create-tables": "node db/createTables.js",
+    "start-presale": "node scripts/startPresale",
+    "start-public": "node scripts/startPublic.js",
+    "import-whitelist": "node scripts/importWL.js",
+    "server": "node server.js",
+    "tx": "node scripts/tx.js",
+    "queue": "node scripts/assignMint.js",
+    "retry": "node scripts/retryMint.js"
   }
 }
